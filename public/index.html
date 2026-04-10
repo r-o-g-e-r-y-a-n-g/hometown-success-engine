@@ -39,7 +39,7 @@
 
             // 2. Fetch all hubs from your Python backend
             try {
-                const response = await fetch("http://localhost:5000/api/hubs");
+                const response = await fetch("https://hometown-success-engine-583694496401.us-west2.run.app/api/hubs");
                 const hubs = await response.json();
                 
                 // 3. Loop through the hubs and drop a pin for each
@@ -78,7 +78,7 @@
             contentArea.innerHTML = `<h3>Analyzing ${cityName}...</h3><p>Consulting Vertex AI...</p>`;
 
             try {
-                const response = await fetch(`http://localhost:5000/api/hub/${cityName}`);
+                const response = await fetch(`https://hometown-success-engine-583694496401.us-west2.run.app/api/hub/${cityName}`);
                 const data = await response.json();
 
                 // Format the AI narrative paragraphs
