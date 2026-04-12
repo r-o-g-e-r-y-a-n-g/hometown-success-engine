@@ -15,7 +15,11 @@
 The **Hometown Success Engine** illuminates the relationship between the American landscape and the development of Team USA athletes. By correlating official Olympic and Paralympic data with geographic locations, this tool visually maps "Athlete Hubs" across the country.
 
 Instead of just showing statistics, the Engine utilizes **Google Vertex AI** to dynamically generate inclusive, conditional narratives explaining how a region's unique geography, climate, or infrastructure (e.g., coastal waters, mountain elevations, dense urban centers) can build strong athletic communities.
+---
+(353)
+The **Hometown Success Engine** maps the hometowns of Team USA athletes across the USA. The United States of America has diverse terrain, climate, and infrastructure that can build strong athletic communities. Our tool visualizes how certain sports can cluster around "Athlete Hubs" across the country and could help find our next hometown success.
 
+Instead of just showing statistics, the Engine utilizes **Google Vertex AI** to dynamically generate detailed narratives explaining how a region's unique geography, climate, or infrastructure provide the environment for Team USA excellence.
 ---
 
 ## 🖥️ Architecture
@@ -28,14 +32,13 @@ This project is a fully serverless, full-stack application built exclusively on 
 ---
 
 ## 🚀 Live Demo
-**[Firebase .web.app link here]**
+**[\[Hometown Success Engine\]](https://integral-zephyr-492520-b1.web.app/)**
 
-*Tip: Click on any blue hub on the map to trigger the Vertex AI narrative!*
+*Tip: Click on any blue dot on the map to trigger the Vertex AI narrative!*
 
 ---
 
 ## 💻 Local Testing Instructions
-
 You can easily spin this project up locally to test the BigQuery and Gemini API integrations.
 
 ### Prerequisites
@@ -82,4 +85,4 @@ Open your web browser and navigate to http://localhost:8000. Click any hub on th
 
 ## 🏊🤽🚣🛶⛵🏄🚴🚵🛹🧗🏇⛷️🎿🏂⛸️🏒🥌🛷🧑‍🦽🧑‍🦼🦯🕺💃
 
-**🤝 Designed and engineered by Roger Yang with Gemini 3 for the Team USA x Google Cloud Hackathon Hackathon.**
+**🤝 Designed and engineered by Roger Yang with Gemini 3 for the Team USA x Google Cloud Hackathon.**
