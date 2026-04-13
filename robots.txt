@@ -1,0 +1,7 @@
+# https://hometownsuccess.com/robots.txt
+# Allow all web crawlers to index the entire site
+User-agent: *
+Allow: /
+
+# Point crawlers directly to the sitemap
+Sitemap: https://hometownsuccess.com/sitemap.xml

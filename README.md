@@ -33,8 +33,10 @@ This project is a fully serverless, full-stack application built exclusively on 
 
 ## 🚀 Live Demo
 **[\[Hometown Success Engine\]](https://hometown-success-engine.web.app/)** or https://hometown-success-engine.firebaseapp.com/
+Website: https://hometownsuccess.com
+App: https://hometown-success-engine.firebaseapp.com
 
-*Tip: Click on any blue dot on the map to trigger the Vertex AI narrative!*
+*Tip: Click on any blue dot on the map to trigger the Vertex AI story for the city!*
 
 ---
 

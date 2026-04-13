@@ -1,0 +1,9 @@
+/* TEAM */
+Developer: Roger Yang
+Role: Full-Stack Developer, Data Engineering
+Site: https://www.linkedin.com/in/rogeryang1/
+
+/* SITE */
+Last update: 2026-04-12
+Language: English
+Tech Stack: HTML, CSS, JavaScript, D3.js, Firebase, Google Maps API, Gemini 1.5 Flash
