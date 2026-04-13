@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "integral-zephyr-492520-b1"
-  }
+  },
+  "targets": {
+    "integral-zephyr-492520-b1": {
+      "hosting": {
+        "production": [
+          "hometown-success-engine"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

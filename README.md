@@ -32,7 +32,7 @@ This project is a fully serverless, full-stack application built exclusively on 
 ---
 
 ## 🚀 Live Demo
-**[\[Hometown Success Engine\]](https://integral-zephyr-492520-b1.web.app/)**
+**[\[Hometown Success Engine\]](https://hometown-success-engine.web.app/)** or https://hometown-success-engine.firebaseapp.com/
 
 *Tip: Click on any blue dot on the map to trigger the Vertex AI narrative!*
 
