@@ -1,4 +1,4 @@
-# Hometown Success Engine for Team USA — Powered by Gemini
+# Hometown Success Engine for Team USA
 
 **An Interactive AI-Powered Map Exploring the Geography of Team USA Excellence Across Sports.**
 
