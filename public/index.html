@@ -18,10 +18,22 @@
         .bg-blue { background-color: #e8f0fe; }
         .bg-red { background-color: #fce8e6; }
         .insight-text p { line-height: 1.6; color: #3c4043; }
-        @media (max-width: 900px) {
-            body { flex-direction: column; }
-            #map-container, #sidebar { flex: none; height: 50vh; }
-            #sidebar { border-left: none; border-top: 2px solid #ddd; }
+        /* Responsive adjustments for mobile */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column; /* Stack vertically on phones */
+                overflow-y: auto; /* Allow scrolling on mobile */
+            }
+            #map-container {
+                height: 50vh; /* Map takes top half */
+                flex: none;
+            }
+            #sidebar {
+                height: auto; /* Sidebar flows naturally below */
+                flex: none;
+                border-left: none;
+                border-top: 2px solid #ddd;
+            }
         }
     </style>
     <meta name="description" content="Discover how geography shapes greatness. Powered by Gemini, this tool maps Team USA hometowns to highlight inclusive Athlete Hubs across the American landscape.">
