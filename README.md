@@ -16,7 +16,7 @@ Every sports champion starts somewhere. Have you ever wondered if the place you 
 ---
 
 ## 🖥️ Architecture
-This project is a fully serverless, full-stack application built exclusively on the Google Cloud ecosystem:
+This project is a full-stack application built using Google Cloud Platform:
 * **Database:** **Google BigQuery** securely hosts and queries the geocoded Team USA dataset.
 * **Backend:** A lightweight **Python Flask** server deployed via **Google Cloud Run** acts as the bridge.
 * **Frontend:** HTML/JS interactive dashboard using **Google Maps Platform**, hosted globally on **Firebase Hosting**.
