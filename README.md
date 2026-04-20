@@ -1,6 +1,6 @@
 # Hometown Success Engine for Team USA
 
-**An Interactive AI-Powered Map Exploring the Geography of Team USA Excellence Across Sports.**
+**An interactive map exploring the hometowns of Team USA athletes with Gemini.**
 
 [![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
 [![BigQuery](https://img.shields.io/badge/BigQuery-4285F4?style=for-the-badge&logo=google-bigquery&logoColor=white)](https://cloud.google.com/bigquery)
@@ -12,7 +12,6 @@
 
 ## 🌎 Overview
 Every sports champion starts somewhere. Have you ever wondered if the place you live shapes the athlete you become? Do local mountains build better snowboarders? Do wide-open plains forge faster runners? We built the Hometown Success Engine to find out. By mapping over 8,000 elite Team USA athletes across 3,000 cities, we visualize how geography influences athletic development. Our Gemini AI engine then analyzes the hidden connections between local weather, landscapes, and specific sports. Our vision is to show how the American landscape fosters Team USA excellence.
-
 
 ---
 
