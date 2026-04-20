@@ -31,13 +31,15 @@
     <div id="map-container"></div>
 
     <div id="sidebar">
-        <h2 style="color: #202124; margin-bottom: 5px;">Hometown Success Engine for Team USA — Powered by Gemini</h2>
-        <p style="color: #5f6368; font-size: 14px; margin-top: 0;">Athlete data from TeamUSA.com</p>
-        <p style="color: #5f6368; font-size: 14px; margin-top: 0;">Powered by Google BigQuery & Gemini Vertex AI</p>
-        
+        <h2 style="color: #202124; margin-bottom: 5px;">Hometown Success Engine for Team USA</h2>
+        <p align="justify">Every sports champion starts somewhere. Have you ever wondered if the place you live shapes the athlete you become? Do local mountains build better snowboarders? Do wide-open plains forge faster runners? We built the Hometown Success Engine to find out. By mapping over 8,000 elite Team USA athletes across 3,000 cities, we visualize how geography influences athletic development. Our Gemini AI engine then analyzes the hidden connections between local weather, landscapes, and specific sports. Our vision is to show how the American landscape fosters Team USA excellence.</p>
+        <p style="color: #5f6368; font-size: 14px; margin-top: 0;">Athlete data from <a href="https://www.teamusa.com/" target="_blank">TeamUSA.com</a></p>
+        <p style="color: #5f6368; font-size: 14px; margin-top: 0;">Powered by <a href="https://cloud.google.com/bigquery" target="_blank">Google BigQuery</a> & <a href="https://cloud.google.com/vertex-ai" target="_blank">Gemini Vertex AI</a></p>
+        <hr>
+        <!-- Usage instructions. On click, this content is replaced by the AI narrative. -->
         <div id="content-area" style="margin-top: 50px; text-align: center; color: #80868b;">
-            <h3>Select a Hub on the Map</h3>
-            <p>Click any pin to generate an AI narrative.</p>
+            <h3>Select a City on the Map</h3>
+            <p>Click any pin to generate an AI narrative about athletes from that city.</p>
         </div>
     </div>
 
@@ -74,12 +76,6 @@
                             strokeColor: "#ffffff",
                             strokeWeight: 1
                         }
-                    });
-
-                    // Initialize the Clusterer
-                    const markerCluster = new markerClusterer.MarkerClusterer({ 
-                        HOMETOWNSUCCESS, 
-                        marker
                     });
 
                     // 4. Listen for clicks on the pins
@@ -125,9 +121,6 @@
             }
         }
     </script>
-
-    <!-- Load the Google Maps JavaScript MarkerClusterer -->
-    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGAOTEdGqYEYGY4oGWUSLp534PKj2-lXA&callback=initMap"></script>
 </body>
