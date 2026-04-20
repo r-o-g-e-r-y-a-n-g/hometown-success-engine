@@ -21,18 +21,19 @@
         /* Responsive adjustments for mobile */
         @media (max-width: 768px) {
             body {
-                flex-direction: column; /* Stack vertically on phones */
-                overflow-y: auto; /* Allow scrolling on mobile */
+                flex-direction: column; /* Stacks them vertically */
             }
             #map-container {
-                height: 50vh; /* Map takes top half */
-                flex: none;
+                flex: none; /* Overrides your original flex: 2 */
+                height: 50vh; /* Locks map to the top half of the screen */
+                width: 100%;
             }
             #sidebar {
-                height: auto; /* Sidebar flows naturally below */
-                flex: none;
-                border-left: none;
-                border-top: 2px solid #ddd;
+                flex: none; /* Overrides your original flex: 1 */
+                height: 50vh; /* Locks sidebar to the bottom half */
+                width: 100%;
+                border-left: none; /* Removes the desktop side border */
+                border-top: 2px solid #ddd; /* Adds a border above the text */
             }
         }
     </style>
