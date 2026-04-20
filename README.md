@@ -24,7 +24,7 @@ This project is a fully serverless, full-stack application built exclusively on 
 
 ---
 
-## 📝 Instructions
+## 📝 Reproducible Testing Instructions
 The easiest way to evaluate the Hometown Success Engine is via our live deployment, which is fully wired to our Google BigQuery dataset and Vertex AI.
 
 1. Navigate to the Live Site: Open [HometownSuccess.com](https://hometownsuccess.com) in any modern web browser. The [Hometown Success Engine](https://hometown-success-engine.firebaseapp.com) is hosted on Firebase.
