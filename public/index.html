@@ -11,13 +11,18 @@
     </script>
     <title>Hometown Success for Team USA | hometownsuccess.com</title>
     <style>
-        body { margin: 0; padding: 0; font-family: sans-serif; display: flex; height: 100vh; overflow: hidden; }
+        body { margin: 0; padding: 0; font-family: sans-serif; display: flex; flex-direction: row; height: 100vh; overflow: hidden; }
         #map-container { flex: 2; height: 100%; }
         #sidebar { flex: 1; height: 100%; background: #f8f9fa; border-left: 2px solid #ddd; padding: 30px; overflow-y: auto; box-sizing: border-box; }
         .stat-box { display: inline-block; padding: 10px 15px; border-radius: 8px; margin-right: 15px; margin-bottom: 20px; }
         .bg-blue { background-color: #e8f0fe; }
         .bg-red { background-color: #fce8e6; }
         .insight-text p { line-height: 1.6; color: #3c4043; }
+        @media (max-width: 900px) {
+            body { flex-direction: column; }
+            #map-container, #sidebar { flex: none; height: 50vh; }
+            #sidebar { border-left: none; border-top: 2px solid #ddd; }
+        }
     </style>
     <meta name="description" content="Discover how geography shapes greatness. Powered by Gemini, this tool maps Team USA hometowns to highlight inclusive Athlete Hubs across the American landscape.">
     <meta property="og:type" content="website">
