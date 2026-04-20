@@ -20,7 +20,7 @@ This project is a fully serverless, full-stack application built exclusively on 
 * **Database:** **Google BigQuery** securely hosts and queries the geocoded Team USA dataset.
 * **AI Engine:** **Google Vertex AI** processes hub statistics on the fly to generate nuanced, rule-compliant narratives.
 * **Backend API:** A lightweight **Python Flask** server deployed via **Google Cloud Run** acts as the bridge.
-* **Frontend:** A lightning-fast HTML/JS interactive dashboard utilizing the **Google Maps Platform**, hosted globally on **Firebase Hosting**.
+* **Frontend:** HTML/JS interactive dashboard using **Google Maps Platform**, hosted globally on **Firebase Hosting**.
 
 ---
 
