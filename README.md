@@ -21,7 +21,7 @@ This project is a full-stack application built using Google Cloud Platform:
 * **Database:** **Google BigQuery** securely hosts and queries the geocoded Team USA dataset.
 * **Backend:** A lightweight **Python Flask** server deployed via **Google Cloud Run** acts as the bridge.
 * **Frontend:** HTML/JS interactive dashboard using **Google Maps Platform**, hosted globally on **Firebase Hosting**.
-* **AI Engine:** **Gemini Enterprise Agent Platform** processes hub statistics on the fly to generate sports-oriented narratives.
+* **AI Engine:** **Gemini Enterprise Agent Platform** processes hub statistics on the fly to generate sports narratives.
 
 ---
 
