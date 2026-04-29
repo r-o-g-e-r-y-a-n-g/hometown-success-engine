@@ -50,6 +50,13 @@ If you wish to deploy this architecture yourself, you must:
 
 4. Create a .env file in the root directory and add: GEMINI_API_KEY=your_key_here.
 
+## Hometown Success Engine Tech Stack Video
+
+In this video, we break down the technology stack and data flow that powers our interactive mapping platform.
+
+[![Hometown Success Engine Tech Stack Video](https://img.youtube.com/vi/2rn3J4Ln5oU/0.jpg)](https://www.youtube.com/watch?v=2rn3J4Ln5oU)
+
+
 ## 🇺🇸🥇🥈🥉⚽🏀🎾🏐🏓🏸⛳🏉🤾🏑🏃🤸🏋️🏹🤺🥋🤼🥊🎯
 **Designed and engineered by Roger Yang with Gemini for the Team USA x Google Cloud Hackathon.**
 ## 🏊🤽🚣🛶⛵🏄🚴🚵🛹🧗🏇⛷️🎿🏂⛸️🏒🥌🛷🧑‍🦽🧑‍🦼🦯🕺💃
