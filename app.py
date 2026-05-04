@@ -65,14 +65,17 @@ Generate a "Hometown Success Story" structured into two concise paragraphs:
     *   Conclude with an inclusive statement about the community's overall contribution to Team USA, emphasizing "total_athletes".
 """
 
-@app.route('/api/hub/<city_name>', methods=['GET'])
-def get_hub_insight(city_name):
+@app.route('/api/hub/<city_name>/<state_name>', methods=['GET'])
+def get_hub_insight(city_name, state_name):
     """Fetches BigQuery data for a city, then generates a Gemini insight."""
     
     # 1. PULL DATA FROM BIGQUERY
-    query_string = f"SELECT * FROM `{table_id}` WHERE city = @city LIMIT 1"
+    query_string = f"SELECT * FROM `{table_id}` WHERE city = @city AND state = @state LIMIT 1"
     job_config = bigquery.QueryJobConfig(
-        query_parameters=[bigquery.ScalarQueryParameter("city", "STRING", city_name)]
+        query_parameters=[
+            bigquery.ScalarQueryParameter("city", "STRING", city_name),
+            bigquery.ScalarQueryParameter("state", "STRING", state_name)
+        ]
     )
     query_job = bigquery_client.query(query_string, job_config=job_config)
     query_results = list(query_job.result())

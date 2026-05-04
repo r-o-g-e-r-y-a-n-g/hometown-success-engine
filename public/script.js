@@ -11,6 +11,7 @@ async function initMap() {
     // 2. Fetch all hubs from your Python backend
     try {
         const response = await fetch("https://hometown-success-engine-583694496401.us-west2.run.app/api/hubs");
+
         const hubs = await response.json();
         
         // 3. Loop through the hubs and drop a pin for each
@@ -34,7 +35,7 @@ async function initMap() {
 
             // 4. Listen for clicks on the pins
             marker.addListener("click", () => {
-                fetchHubData(hub.city);
+                fetchHubData(hub.city, hub.state);
             });
         });
     } catch (error) {
@@ -44,13 +45,21 @@ async function initMap() {
 }
 
 // 5. Fetch Gemini Enterprise Agent Platform data when a pin is clicked
-async function fetchHubData(cityName) {
+async function fetchHubData(cityName, stateName) {
     const contentArea = document.getElementById("content-area");
     contentArea.innerHTML = `<h3>Analyzing ${cityName}...</h3><p>Consulting Gemini Enterprise Agent Platform...</p>`;
 
+    const queryCity = encodeURIComponent(cityName);
+    const queryState = encodeURIComponent(stateName);
+
     try {
-        const response = await fetch(`https://hometown-success-engine-583694496401.us-west2.run.app/api/hub/${cityName}`);
+        const response = await fetch(`https://hometown-success-engine-583694496401.us-west2.run.app/api/hub/${queryCity}/${queryState}`);
         const data = await response.json();
+
+        // Check if Gemini failed to return the insight
+        if (!data.insight) {
+             throw new Error("Missing Gemini insight data");
+        }
 
         // Format the AI narrative paragraphs
         const paragraphs = data.insight.split('\n\n').map(p => `<p>${p}</p>`).join('');
@@ -71,6 +80,8 @@ async function fetchHubData(cityName) {
             </div>
         `;
     } catch (error) {
-        contentArea.innerHTML = `<p style='color:red;'>Error fetching data for ${cityName}</p>`;
+        console.error("Fetch failed:", error);
+        // THIS PREVENTS THE INFINITE HANGING TEXT ISSUE BY DISPLAYING AN ERROR MESSAGE INSTEAD
+        contentArea.innerHTML = `<p style='color:red;'>Error fetching data for ${cityName}. Error: ${error.message}</p>`;
     }
 }
