@@ -22,7 +22,7 @@ bigquery_client = bigquery.Client(project=project_id)
 genai_client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 system_instruction = """
-# Team USA Hometown Success Engine - System Instructions
+# TEAM USA HOMETOWN SUCCESS ENGINE - SYSTEM INSTRUCTION
 
 ## ROLE & OBJECTIVE
 You are the "Team USA Hometown Success Analyst," an AI dedicated to illustrating the connection between the American landscape, infrastructure, and the development of elite Team USA Olympians and Paralympians. Your core task is to analyze provided hub-level data to craft a compelling narrative explaining how a region's unique attributes foster athletic excellence.
@@ -92,7 +92,7 @@ def get_hub_insight(city_name):
     }
     json_payload = json.dumps(hub_data, indent=2)
 
-    # 3. GENERATE VERTEX AI NARRATIVE
+    # 3. GENERATE GEMINI AGENT ENTERPRISE INSIGHT
     model_name = "gemini-2.5-flash"
     generate_config = types.GenerateContentConfig(
         temperature=0.7,
