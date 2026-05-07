@@ -42,7 +42,7 @@ body, html {
 h1 { font-size: 20px; margin-bottom: 10px; color: #1a1a1a; }
 h2 { font-size: 18px; margin-bottom: 10px; color: #1a1a1a; }
 h3 { font-size: 16px; margin-bottom: 8px; color: #1a1a1a; }
-p { font-size: 14px; line-height: 1.5; margin-bottom: 15px; color: #555; }
+p { font-size: 16px; line-height: 1.5; margin-bottom: 15px; color: #555; }
 
 .stat-box {
     display: inline-block;
@@ -112,8 +112,9 @@ p { font-size: 14px; line-height: 1.5; margin-bottom: 15px; color: #555; }
     #sidebar { flex: none; height: 50vh; width: 100%; border-left: none; border-top: 2px solid #ddd; padding: 20px; }
 }
 
+
 /* 6. Dark Mode Support */
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
     body { background-color: #121212; color: #e8eaed; }
     #sidebar { background: #202124; border-left: 2px solid #3c4043; }
     h2, h3 { color: #ffffff; }
@@ -134,4 +135,47 @@ p { font-size: 14px; line-height: 1.5; margin-bottom: 15px; color: #555; }
     @media (max-width: 768px) {
         #sidebar { border-top: 2px solid #3c4043; }
     }
+}*/
+
+
+/* "Gold Medal Rim" custom map markers Gemini v2 */
+/* Base styles shared by all markers */
+.hub-badge {
+    width: 32px; /* Fixed size ensures text is always readable */
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 13px; /* Standardized text size */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+/* Hover State for all markers */
+.hub-badge:hover {
+    transform: scale(1.25);
+    background-color: rgba(191, 10, 48, 0.95); /* Team USA Red on hover */
+    color: white;
+    z-index: 1000 !important; /* Forces hovered pin to the front */
+}
+
+/* Standard cities - Old Glory Blue with Opacity */
+.standard-hub {
+    /* #0A3161 converted to RGB with 75% opacity */
+    background-color: rgba(10, 49, 97, 0.75); 
+    border: 2px solid rgba(255, 255, 255, 0.6); /* Semi-transparent white border */
+    color: white;
+}
+
+/* Gold Medal cities */
+.medal-hub {
+    /* Slightly less transparent so medal hubs stand out more */
+    background-color: rgba(10, 49, 97, 0.85); 
+    border: 2px solid #FFD700; /* Pure Gold Rim */
+    color: #FFD700; /* Gold text */
+    /* Subtle gold glow */
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5); 
+    z-index: 10; /* Ensures gold hubs render on top of standard hubs */
 }

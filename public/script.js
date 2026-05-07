@@ -5,44 +5,48 @@ let activeMarkers = []; // Tracks current map pins so we can clear them dynamica
 
 // 1. Initialize the Google Map
 async function initMap() {
+    // Import the marker library
+    const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
+    // Initialize the Google Map
     map = new google.maps.Map(document.getElementById("map-container"), {
         center: { lat: 39.8283, lng: -98.5795 }, // Center of USA
         zoom: 4,
-        mapId: "HOMETOWNSUCCESS"
+        mapId: "DEMO_MAP_ID", // Optional: Use a custom map style from Google Cloud Console
     });
 
     // 2. Fetch all hubs from your Python backend
     try {
         const response = await fetch("https://hometown-success-engine-583694496401.us-west2.run.app/api/hubs");
         const hubs = await response.json();
-
         allHubsData = hubs; // Cache the raw data for later filtering and marker management
-
         // TASK 2.1: Cache the data locally and create markers
         allHubsData = hubs.map(hub => {
             // Failsafe: Ensure the hub actually has coordinates before drawing
             if (!hub.lat || !hub.lng) return hub;
-
             // Calculate a rough size multiplier based on athletes
             const scaleSize = Math.min(15, Math.max(5, hub.athletes / 5));
-            
+            // Create a custom HTML element for AdvancedMarkerElement
+            const customTag = document.createElement("div");
+            customTag.className = "hub-badge";
+            customTag.textContent = hub.athletes || "USA";
             // Create the markers
-            const marker = new google.maps.Marker({
+            const marker = new AdvancedMarkerElement({
                 position: { lat: parseFloat(hub.lat), lng: parseFloat(hub.lng) },
                 map: map,
-                title: hub.city,
-                icon: {
-                    path: google.maps.SymbolPath.CIRCLE,
-                    scale: scaleSize,
-                    fillColor: "#1a73e8",
-                    fillOpacity: 0.8,
-                    strokeColor: "#ffffff",
-                    strokeWeight: 1
-                }
+                title: `${hub.city}, ${hub.state}`,
+                gmpClickable: true,
+                content: customTag,
             });
 
+            // Data-Driven Styling Logic for Medals:
+            if (hub.medals > 0) { // Check if this hub has medals
+                customTag.className = "hub-badge medal-hub";
+            } else {
+                customTag.className = "hub-badge standard-hub";
+            }
+
             // Click listener for Gemini insight
-            marker.addListener('click', () => {
+            marker.addEventListener('gmp-click', () => {
                 fetchHubData(hub.city, hub.state);
             });
 
@@ -51,9 +55,8 @@ async function initMap() {
             return hub;
         });
 
-        // TASK 2.2: Build the menu (assuming you have your hardcoded function)
+        // TASK 2.2: Build the menu
         populateSportsDropdown();        
-
 
     } catch (error) {
         console.error("Error loading initial hubs:", error);
@@ -103,7 +106,6 @@ async function fetchHubData(cityName, stateName) {
     }
 }
 
-
 // --- TASK 2.2: Hard-Coded Sports Dropdown ---
 function populateSportsDropdown() {
     const dropdown = document.getElementById('sport-filter');
@@ -111,7 +113,7 @@ function populateSportsDropdown() {
     // Clear the dropdown and add the default "All Sports" option first
     dropdown.innerHTML = '<option value="all">All Sports</option>';
 
-    // Hard-coded list from TeamUSA.com CSV
+    // Hard-coded list of sports from TeamUSA.com
     const teamUsaSports = [
         "Alpine Skiing", "Archery", "Artistic Swimming", "Badminton", "Baseball", 
         "Basketball", "Biathlon", "Blind Soccer", "Bobsled", "Boccia", "Bowling", 
@@ -142,14 +144,13 @@ function populateSportsDropdown() {
     });
 }
 
-
 // 4. Filter Map by Sport (High Performance Version)
 document.getElementById('sport-filter').addEventListener('change', (event) => {
     // 1. Normalize the user's selection to lowercase
     const selectedSport = event.target.value.toLowerCase().trim();
     const showAll = (selectedSport === 'all' || selectedSport === 'all sports');
 
-    // 2. Loop through our permanent data vault
+    // 2. Loop through the cache
     allHubsData.forEach(hub => {
         // FIX: Add safety check in case a hub object failed to map correctly
         if (!hub) return;
@@ -165,13 +166,11 @@ document.getElementById('sport-filter').addEventListener('change', (event) => {
 
         // 3. Toggle visibility
         if (hub.marker) {
-            hub.marker.setVisible(isMatch);
+            //hub.marker.setVisible(isMatch);
+            hub.marker.map = isMatch ? map : null;
         }
     });
 });
-
-
-
 
 // Expose initMap to the global window object so the Google Maps script tag can call it
 window.initMap = initMap;

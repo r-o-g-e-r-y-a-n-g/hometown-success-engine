@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Hometown Success Engine for Team USA | hometownsuccess.com</title>
+    <link rel="canonical" href="https://hometownsuccess.com/">
+    <link rel="stylesheet" href="style.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWR85T0CYD"></script>
     <script>
@@ -9,42 +12,36 @@
         gtag('js', new Date());
         gtag('config', 'G-CWR85T0CYD');
     </script>
-    <title>Hometown Success Engine for Team USA | hometownsuccess.com</title>
-
-    <link rel="stylesheet" href="style.css">
-
+    <!-- Meta tags for SEO and social media sharing -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-
     <meta name="description" content="Discover how geography shapes greatness. Powered by Gemini, our engine maps Team USA athlete hometowns to highlight sports hubs across the American landscape.">
+    <!-- Open Graph meta tags for social media sharing -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hometownsuccess.com/">
     <meta property="og:title" content="Hometown Success Engine for Team USA | hometownsuccess.com">
     <meta property="og:description" content="Discover how geography shapes greatness. Powered by Gemini, our engine maps Team USA athlete hometowns to highlight sports hubs across the American landscape.">
-<!-- <meta property="og:image" content="https://hometownsuccess.com/your-cover-image.jpg"> -->
-
-
+    <!-- <meta property="og:image" content="https://hometownsuccess.com/your-cover-image.jpg"> 1200x630px 'og-preview' -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hometown Success Engine for Team USA">
+    <meta name="twitter:description" content="Powered by Gemini, our engine maps Team USA athlete hometowns to highlight sports hubs across the American landscape.">
+    <!-- <meta name="twitter:image" content="https://hometownsuccess.com/assets/og-preview.png"> -->
 </head>
 <body>
-
     <div id="map-container"></div>
-
     <div id="sidebar" class="sidebar-container">
         <h1 style="color: #1a73e8; margin-bottom: 5px;">Hometown Success Engine for Team USA</h1>
         <p><strong>Interactive AI map exploring Team USA athlete hometowns with Gemini.</strong></p>
         <p align="justify">How do we find elite athletes? Every sports champion starts somewhere. Have you ever wondered if the place you live shapes the athlete you become? Do local mountains build better snowboarders? Do wide-open plains forge faster runners? We built the Hometown Success Engine to find out. By mapping over 8,000 elite Team USA athletes across 3,000 cities, we visualize how geography influences athletic development. Our Gemini AI engine then analyzes the hidden connections between local weather, landscapes, and specific sports. Our vision is to show how the American landscape fosters Team USA excellence.</p>
-
         <div class="filter-container" >
             <label for="sport-filter" class="filter-label">Filter Map by Sport:</label>
             <select id="sport-filter" class="sport-dropdown">
                 <option value="all">All Sports</option>
-                </select>
+            </select>
         </div>
-
         <p></p>
         <p style="color: #5f6368;">Athlete data from <a href="https://www.teamusa.com/" target="_blank">TeamUSA.com</a></p>
         <p style="color: #5f6368;">Built on <a href="https://cloud.google.com/" target="_blank">Google Cloud:</a> <a href="https://cloud.google.com/bigquery/" target="_blank">BigQuery,</a> <a href="https://gemini.google.com/" target="_blank">Gemini,</a> & <a href="https://cloud.google.com/products/gemini-enterprise-agent-platform/" target="_blank">Gemini Enterprise Agent Platform</a></p>
-
         <hr>
         <!-- Usage instructions. On click, this content is replaced by the AI narrative. -->
         <div id="content-area" style="margin-top: 20px; text-align: center; color: #80868b;">
@@ -52,7 +49,6 @@
             <p>Click any marker to generate an AI narrative about athletes from that city.</p>
         </div>
     </div>
-
     <script src="script.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGAOTEdGqYEYGY4oGWUSLp534PKj2-lXA&loading=async&callback=initMap"></script>
 </body>

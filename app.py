@@ -131,7 +131,7 @@ def get_hub_insight(city_name, state_name):
 @app.route('/api/hubs', methods=['GET'])
 def get_all_hubs():
     """Fetches just the coordinates and sizes to draw the initial map."""
-    query_string = f"SELECT city, state, total_athletes, latitude, longitude, clustered_sports FROM `{table_id}` WHERE latitude IS NOT NULL"
+    query_string = f"SELECT city, state, total_athletes, total_medals, clustered_sports, latitude, longitude FROM `{table_id}` WHERE latitude IS NOT NULL"
     query_job = bigquery_client.query(query_string)
     
     # Format the results for the React map
@@ -143,6 +143,7 @@ def get_all_hubs():
             "lat": row.latitude,
             "lng": row.longitude,
             "athletes": row.total_athletes,
+            "medals": row.total_medals,
             "clustered_sports": row.clustered_sports
         })
     
