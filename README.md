@@ -49,13 +49,13 @@ If you wish to deploy this architecture yourself, you must:
 ## 🧰 Hometown Success Engine Tech Stack Video
 In this video, we break down the technology stack and data flow that powers our interactive mapping platform. Click the preview to watch on YouTube.
 
-[![Hometown Success Engine Tech Stack Video](https://img.youtube.com/vi/2rn3J4Ln5oU/0.jpg)](https://www.youtube.com/watch?v=2rn3J4Ln5oU)
+[![Hometown Success Engine Tech Stack Video](https://img.youtube.com/vi/2rn3J4Ln5oU/0.jpg)](https://www.youtube.com/watch?v=75_8m04yyjE)
 
 ---
 
 ## ✅ Development Notes
 
-2026-05-09: We're now using AdvancedMarkerElement in Google Maps API. If you visited our site before this update and see blue markers of different sizes on the map, you will need to empty cache for your browser and do a hard reload of hometownsuccess.com (CTRL+SHIFT+R). If you see circles with numbers in them, those are AdvancedMarkerElements in Google Maps and you are viewing our most recent version. A hard reload of the browser will refresh the JavaScript cache & CSS styles for the site.
+2026-05-09: RETURNING USERS, we're now using AdvancedMarkerElement in Google Maps API. If you visited our site before this update and see blue markers of different sizes on the map, you will need to empty cache for your browser and do a hard reload of hometownsuccess.com (CTRL+SHIFT+R). If you see circles with numbers in them, those are AdvancedMarkerElements in Google Maps and you are viewing our most recent version. A hard reload of the browser will refresh the JavaScript cache & CSS styles for the site.
 
 
 ## 🇺🇸🥇🥈🥉⚽🏀🎾🏐🏓🏸⛳🏉🤾🏑🏃🤸🏋️🏹🤺🥋🤼🥊🎯
