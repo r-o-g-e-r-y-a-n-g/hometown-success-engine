@@ -156,7 +156,7 @@ p { font-size: 16px; line-height: 1.5; margin-bottom: 15px; color: #555; }
 /* Hover State for all markers */
 .hub-badge:hover {
     transform: scale(1.25);
-    background-color: rgba(191, 10, 48, 0.95); /* Team USA Red on hover */
+    background-color: rgba(179, 25, 66, 0.95); /* Old Glory Red on hover with 95% opacity */
     color: white;
     z-index: 1000 !important; /* Forces hovered pin to the front */
 }
@@ -164,7 +164,7 @@ p { font-size: 16px; line-height: 1.5; margin-bottom: 15px; color: #555; }
 /* Standard cities - Old Glory Blue with Opacity */
 .standard-hub {
     /* #0A3161 converted to RGB with 75% opacity */
-    background-color: rgba(10, 49, 97, 0.75); 
+    background-color: rgba(10, 49, 97, 0.75);  /* Old Glory Blue with 75% opacity */
     border: 2px solid rgba(255, 255, 255, 0.6); /* Semi-transparent white border */
     color: white;
 }
@@ -179,3 +179,78 @@ p { font-size: 16px; line-height: 1.5; margin-bottom: 15px; color: #555; }
     box-shadow: 0 0 8px rgba(255, 215, 0, 0.5); 
     z-index: 10; /* Ensures gold hubs render on top of standard hubs */
 }
+
+
+/* Typography and Brand Colors */
+h1, h2 {
+  color: #0a3161; /* Old Glory Blue */
+}
+
+a:hover {
+  text-decoration: underline; 
+}
+
+.feature-list {
+    list-style: none; /* Removes default messy bullets */
+    padding-left: 0;
+    margin: 15px 0 25px 0;
+    font-size: 0.95rem; /* Slightly smaller to save space */
+    line-height: 1.5;
+  }
+  .feature-list li {
+    margin-bottom: 8px; /* Tight margins to save vertical space */
+    padding-left: 20px;
+    position: relative;
+  }
+  .feature-list li::before {
+    content: '▪'; /* Clean, modern square bullet */
+    color: #0a3161; /* Old Glory Blue */
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+  .feature-list strong {
+    color: #0a3161;
+  }
+
+
+  .insight-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f9fa; /* Very light grey */
+    border: 2px dashed #cbd5e1; /* Soft blue-grey dashed line */
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+
+  .insight-empty-state .waiting-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    animation: gentle-pulse 2.5s infinite ease-in-out;
+  }
+
+  .insight-empty-state h3 {
+    color: #0a3161; /* Old Glory Blue */
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+  }
+
+  .insight-empty-state p {
+    color: #64748b; /* Slate grey for secondary text */
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
+    max-width: 85%;
+  }
+
+  /* The subtle animation that draws the eye and implies it is 'alive' */
+  @keyframes gentle-pulse {
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.7; }
+  }

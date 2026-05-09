@@ -1,6 +1,6 @@
 # Hometown Success Engine for Team USA
 
-**An interactive map exploring the hometowns of Team USA athletes with Gemini.**
+**Explore athlete hometowns across sports on our interactive map with Gemini.**
 
 [![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
 [![BigQuery](https://img.shields.io/badge/BigQuery-4285F4?style=for-the-badge&logo=google-bigquery&logoColor=white)](https://cloud.google.com/bigquery)
@@ -11,51 +11,48 @@
 ---
 
 ## 🌎 Overview
-How do we find elite athletes? Every sports champion starts somewhere. Have you ever wondered if the place you live shapes the athlete you become? Do local mountains build better snowboarders? Do wide-open plains forge faster runners? We built the Hometown Success Engine to find out. By mapping over 8,000 elite Team USA athletes across 3,000 cities, we visualize how geography influences athletic development. Our Gemini AI engine then analyzes the hidden connections between local weather, landscapes, and specific sports. Our vision is to show how the American landscape fosters Team USA excellence.
+Where can we find athletic success? Our project maps 7,800 Team USA athletes across 2,800 hometowns. We correlate geography with sports using Gemini to reveal how America fosters Team USA excellence.
+### 🏆 Key Features
+- **Sports Filtering:** *Filter Map by Sport* to find athlete hubs for your favorite sport!
+- **Integrated Architecture:** We built on Google Cloud for speed and use advanced markers to provide city info. Responsive UI/UX with Old Glory Blue markers that turn Old Glory Red on hover. A ‘Gold Medal Rim’ signifies that the city has medalists.
+- **Artificial Intelligence:** Geographic Information Systems (GIS) meets Gemini. Interactively generate a story about a city’s dominant sports. Learn from AI insights about geography, climate, altitude, mountains, bodies of water, and sports facilities.
 
 ---
 
 ## 🖥️ Architecture
-This project is a full-stack application built using Google Cloud Platform:
-* **Database:** **Google BigQuery** securely hosts and queries the geocoded Team USA dataset.
-* **Backend:** A lightweight **Python Flask** server deployed via **Google Cloud Run** acts as the bridge.
-* **Frontend:** HTML/JS interactive dashboard using **Google Maps Platform**, hosted globally on **Firebase Hosting**.
-* **AI Engine:** **Gemini Enterprise Agent Platform** processes hub statistics on the fly to generate sports narratives.
+This project is a full-stack application built using **Google Cloud Platform**:
+* **Database:** **Google BigQuery** securely stores and queries our custom geocoded Team USA datasets.
+* **Backend:** A fast Python **Flask** server deployed via **Google Cloud Run** supports our application.
+* **Frontend:** HTML & JavaScript interactive dashboard on **Google Maps Platform**, served globally with **Firebase Hosting**.
+* **AI:** **Gemini Enterprise Agent Platform** processes city athlete statistics and highlights geographic features to generate sports narratives.
 
 ---
 
 ## 📝 Reproducible Testing Instructions
-The easiest way to evaluate the Hometown Success Engine is via our live deployment, which is fully wired to our Google BigQuery dataset and Gemini Enterprise Agent Platform.
+The best way to evaluate the Hometown Success Engine is via our live deployment, which integrates our Google BigQuery dataset and Gemini Enterprise Agent Platform.
+1. Navigate to the Live Site: Open [HometownSuccess.com](https://hometownsuccess.com) in any modern web browser. The Hometown Success Engine is hosted on Firebase.
+2. Explore this map for Team USA: You will see a Google Map populated with city markers. The number on the markers corresponds to the count of Team USA athletes from that specific city. Formatting of the circle with a gold rim indicates that the city has medalists.
+3. Filter the All Sports default map and select a specific sport to evaluate by clicking the dropdown menu. The map API will update to show a subset of cities from the complete dataset, and individual cities will be easier to select.
+4. Trigger the Gemini AI Engine: Click on any of the city markers (e.g., Colorado Springs, CO which is the location of the U.S. Olympic & Paralympic Training Center).
+5. Evaluate the AI Insight: The side-panel will refresh displaying the city statistics including number of Team USA athletes, dominant sports, and a dynamically generated Gemini Enterprise Agent Platform Insight. Review this text to see how the Gemini model correlates Team USA athlete statistics and local geography to generate inclusive sports narratives.
 
-1. Navigate to the Live Site: Open [HometownSuccess.com](https://hometownsuccess.com) in any modern web browser. The [Hometown Success Engine](https://hometown-success-engine.firebaseapp.com) is hosted on Firebase.
 
-2. Explore the Spatial Data: You will see a Google Map populated with hubs. The size of the markers correlates to the volume of Team USA athletes from that specific region.
-
-3. Trigger the Gemini AI Engine: Click on any of the blue hub markers (e.g., Colorado Springs, CO which is the location of the U.S. Olympic & Paralympic Training Center).
-
-4. Evaluate the AI Insight: A side-panel will open displaying the number of Team USA athletes, their top clustered sports, and a dynamically generated Gemini Enterprise Agent Platform Insight. Review this text to see how the Gemini model correlates the local geography/climate to the dominant sports using conditional, inclusive phrasing.
+*⚠️ Note on Local Testing & GitHub Forking: This code repository relies on a private BigQuery instance and Google Cloud Platform API keys.*
+If you wish to deploy this architecture yourself, you must:
+1. Create a Google Cloud Project and enable the BigQuery, Maps, and Gemini API.
+2. Upload athlete data to your own BigQuery dataset.
+3. Update the app.py queries to point to your new dataset.
+4. Create a .env file in the root directory and add: GEMINI_API_KEY=your_key_here.
 
 ---
 
-*⚠️ Note on Local Testing: This application relies on a private Google BigQuery instance and Gemini Enterprise Agent Platform API keys.*
-
-If you wish to deploy this architecture yourself, you must:
-
-1. Create a Google Cloud Project and enable the BigQuery and Gemini AI APIs.
-
-2. Upload athlete data to your own BigQuery dataset.
-
-3. Update the app.py queries to point to your new dataset.
-
-4. Create a .env file in the root directory and add: GEMINI_API_KEY=your_key_here.
-
 ## Hometown Success Engine Tech Stack Video
-
 In this video, we break down the technology stack and data flow that powers our interactive mapping platform. Click the preview to watch on YouTube.
 
 [![Hometown Success Engine Tech Stack Video](https://img.youtube.com/vi/2rn3J4Ln5oU/0.jpg)](https://www.youtube.com/watch?v=2rn3J4Ln5oU)
 
+---
 
 ## 🇺🇸🥇🥈🥉⚽🏀🎾🏐🏓🏸⛳🏉🤾🏑🏃🤸🏋️🏹🤺🥋🤼🥊🎯
-**Designed and engineered by Roger Yang with Gemini for the Team USA x Google Cloud Hackathon.**
+**Designed and engineered by Roger Yang with Gemini for the [Team USA x Google Cloud Hackathon](https://vibecodeforgoldwithgoogle.devpost.com/).**
 ## 🏊🤽🚣🛶⛵🏄🚴🚵🛹🧗🏇⛷️🎿🏂⛸️🏒🥌🛷🧑‍🦽🧑‍🦼🦯🕺💃

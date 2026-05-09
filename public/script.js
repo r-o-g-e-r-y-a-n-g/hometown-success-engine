@@ -67,7 +67,7 @@ async function initMap() {
 // 5. Fetch Gemini Enterprise Agent Platform data when a pin is clicked
 async function fetchHubData(cityName, stateName) {
     const contentArea = document.getElementById("content-area");
-    contentArea.innerHTML = `<h3>Analyzing ${cityName}...</h3><p>Consulting Gemini Enterprise Agent Platform...</p>`;
+    contentArea.innerHTML = `<h3>Analyzing ${cityName}, ${stateName}</h3><p>Consulting Gemini Enterprise Agent Platform...</p>`;
 
     const queryCity = encodeURIComponent(cityName);
     const queryState = encodeURIComponent(stateName);

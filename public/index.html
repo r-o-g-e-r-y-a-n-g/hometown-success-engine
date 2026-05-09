@@ -30,9 +30,18 @@
 <body>
     <div id="map-container"></div>
     <div id="sidebar" class="sidebar-container">
-        <h1 style="color: #1a73e8; margin-bottom: 5px;">Hometown Success Engine for Team USA</h1>
-        <p><strong>Interactive AI map exploring Team USA athlete hometowns with Gemini.</strong></p>
-        <p align="justify">How do we find elite athletes? Every sports champion starts somewhere. Have you ever wondered if the place you live shapes the athlete you become? Do local mountains build better snowboarders? Do wide-open plains forge faster runners? We built the Hometown Success Engine to find out. By mapping over 8,000 elite Team USA athletes across 3,000 cities, we visualize how geography influences athletic development. Our Gemini AI engine then analyzes the hidden connections between local weather, landscapes, and specific sports. Our vision is to show how the American landscape fosters Team USA excellence.</p>
+        <h1 style="margin-bottom: 5px;">Hometown Success Engine for Team USA</h1>
+        <p><strong>Explore athlete hometowns across sports on our interactive map with Gemini.</strong></p>
+
+        <p align="justify">Where can we find athletic success? Our project maps 7,800 Team USA athletes across 2,800 hometowns. We correlate geography with sports using Gemini to reveal how America fosters Team USA excellence.</p>
+
+        <h2>🏆 Key Features</h2>
+        <ul class="feature-list">
+            <li><strong>Sports Filtering:</strong> Filter Map by Sport to find athlete hubs for your favorite sport!</li>
+            <li><strong>Integrated Architecture:</strong> We built on Google Cloud for speed and use advanced markers to provide city info. Responsive UI/UX with Old Glory Blue markers that turn Old Glory Red on hover. A ‘Gold Medal Rim’ signifies that the city has medalists.</li>
+            <li><strong>Artificial Intelligence:</strong> Geographic Information Systems (GIS) meets Gemini. Interactively generate a story about a city’s dominant sports. Learn from AI insights about geography, climate, altitude, mountains, bodies of water, and sports facilities.</li>
+        </ul>
+
         <div class="filter-container" >
             <label for="sport-filter" class="filter-label">Filter Map by Sport:</label>
             <select id="sport-filter" class="sport-dropdown">
@@ -40,15 +49,25 @@
             </select>
         </div>
         <p></p>
-        <p style="color: #5f6368;">Athlete data from <a href="https://www.teamusa.com/" target="_blank">TeamUSA.com</a></p>
-        <p style="color: #5f6368;">Built on <a href="https://cloud.google.com/" target="_blank">Google Cloud:</a> <a href="https://cloud.google.com/bigquery/" target="_blank">BigQuery,</a> <a href="https://gemini.google.com/" target="_blank">Gemini,</a> & <a href="https://cloud.google.com/products/gemini-enterprise-agent-platform/" target="_blank">Gemini Enterprise Agent Platform</a></p>
+
+        <p style="color: #5f6368;">Built using <a href="https://cloud.google.com/products/gemini-enterprise-agent-platform/" target="_blank">Gemini Enterprise Agent Platform</a>. Athlete data from <a href="https://www.teamusa.com/" target="_blank">TeamUSA.com</a></p>
+        <p style="color: #5f6368;">Built by <a href="https://github.com/r-o-g-e-r-y-a-n-g/" target="_blank">Roger Yang</a> &  <a href="https://gemini.google.com/" target="_blank">Gemini</a> for the <a href="https://vibecodeforgoldwithgoogle.devpost.com/" target="_blank">Team USA x Google Cloud Hackathon.</a></p>
+
         <hr>
         <!-- Usage instructions. On click, this content is replaced by the AI narrative. -->
         <div id="content-area" style="margin-top: 20px; text-align: center; color: #80868b;">
-            <h3>Select a City on the Map</h3>
-            <p>Click any marker to generate an AI narrative about athletes from that city.</p>
+
+
+        <div class="insight-empty-state">
+        <div class="waiting-icon">✨</div>
+                <h3>Click any marker to generate a Gemini Enterprise Agent Platform insight.</h3>
+                <!-- LOADING MESSAGE THAT USER SEES AFTER CLICKING A MARKER -->
+                <!-- Analyzing Colorado Springs, CO -->
+                <!-- Consulting Gemini Enterprise Agent Platform... -->
+            </div>
         </div>
-    </div>
+
+
     <script src="script.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGAOTEdGqYEYGY4oGWUSLp534PKj2-lXA&loading=async&callback=initMap"></script>
 </body>
