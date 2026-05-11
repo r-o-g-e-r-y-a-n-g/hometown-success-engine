@@ -49,7 +49,7 @@ If you wish to deploy this architecture yourself, you must:
 ## 🧰 Hometown Success Engine Tech Stack Video
 In this video, we break down the technology stack and data flow that powers our interactive mapping platform. Click the preview to watch on YouTube.
 
-[![Hometown Success Engine Tech Stack Video](https://img.youtube.com/vi/2rn3J4Ln5oU/0.jpg)](https://www.youtube.com/watch?v=75_8m04yyjE)
+[![Hometown Success Engine Tech Stack Video](https://img.youtube.com/vi/75_8m04yyjE/0.jpg)](https://www.youtube.com/watch?v=75_8m04yyjE)
 
 ---
 
