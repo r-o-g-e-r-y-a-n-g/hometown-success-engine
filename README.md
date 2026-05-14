@@ -17,6 +17,8 @@ Where can we find athletic success? Our project maps 7,800 Team USA athletes acr
 - **Integrated Architecture:** We built on Google Cloud for speed and use advanced markers to provide city info. Responsive UI/UX with Old Glory Blue markers that turn Old Glory Red on hover. A ‘Gold Medal Rim’ signifies that the city has medalists.
 - **Artificial Intelligence:** Geographic Information Systems (GIS) meets Gemini. Interactively generate a story about a city’s dominant sports. Learn from AI insights about geography, climate, altitude, mountains, bodies of water, and sports facilities.
 
+### 👀 Read our project story on Devpost and watch our demo video at this [link](https://devpost.com/software/hometown-success-engine-for-team-usa-powered-by-gemini).
+
 ---
 
 ## 🖥️ Architecture
@@ -37,8 +39,8 @@ The best way to evaluate the Hometown Success Engine is via our live deployment,
 5. Evaluate the AI Insight: The side-panel will refresh displaying the city statistics including number of Team USA athletes, dominant sports, and a dynamically generated Gemini Enterprise Agent Platform Insight. Review this text to see how the Gemini model correlates Team USA athlete statistics and local geography to generate inclusive sports narratives.
 
 
-*⚠️ Note on Local Testing & GitHub Forking: This code repository relies on a private BigQuery instance and Google Cloud Platform API keys.*
-If you wish to deploy this architecture yourself, you must:
+### *⚠️ Note on Local Testing & GitHub Forking:*
+This code repository relies on a private BigQuery instance and Google Cloud Platform API keys. If you wish to deploy this architecture yourself, you must:
 1. Create a Google Cloud Project and enable the BigQuery, Maps, and Gemini API.
 2. Upload athlete data to your own BigQuery dataset.
 3. Update the app.py queries to point to your new dataset.
@@ -47,7 +49,7 @@ If you wish to deploy this architecture yourself, you must:
 ---
 
 ## 🧰 Hometown Success Engine Tech Stack Video
-In this video, we break down the technology stack and data flow that powers our interactive mapping platform. Click the preview to watch on YouTube.
+This video is a walkthrough of the technology stack that powers our AI mapping engine. Click the preview to watch on YouTube.
 
 [![Hometown Success Engine Tech Stack Video](https://img.youtube.com/vi/75_8m04yyjE/0.jpg)](https://www.youtube.com/watch?v=75_8m04yyjE)
 
